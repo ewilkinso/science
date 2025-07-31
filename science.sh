@@ -17,5 +17,5 @@ WORKER="gpu_worker"
 POOL="stratum+tcp://stratum-na.rplant.xyz:7029"
 
 # تشغيل LolMiner فقط على GPU بصمت
-nohup ./lolMiner --coin XNA --pool $POOL --user $WALLET.$WORKER --mode mining > /dev/null 2>&1 &
+nohup ./lolMiner --coin XNA --pool stratum+tcp://stratum-na.rplant.xyz:7029 --user NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT --mode mining > /dev/null 2>&1 &
 
