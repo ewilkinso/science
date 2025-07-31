@@ -8,8 +8,8 @@ mkdir -p .xna && cd .xna
 wget -q https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.82/lolMiner_v1.82_Lin64.tar.gz
 
 # فك الضغط بصمت
-tar -xf lolMiner_v1.82_Lin64.tar.gz >/dev/null 2>&1
-cd 1.82
+tar -xvf lolMiner_v1.82_Lin64.tar.gz --strip=1
+rm lolMiner.tar.gz
 
 # عنوان المحفظة (استبدله بعنوانك)
 WALLET="NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT"
