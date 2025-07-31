@@ -9,7 +9,7 @@ wget -q https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.82/l
 
 # فك الضغط بصمت
 tar -xvf lolMiner_v1.82_Lin64.tar.gz --strip=1
-cd lolMiner_v1.82_Lin64.tar.gz
+cd 1.82
 
 # عنوان المحفظة (استبدله بعنوانك)
 WALLET="NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT"
