@@ -17,5 +17,5 @@ WORKER="gpu_worker"
 POOL="stratum+tcp://stratum-eu.rplant.xyz:7029"
 
 # تشغيل LolMiner فقط على GPU بصمت
-nohup ./wildrig-multi --algo kawpow --server stratum+tcp://stratum-eu.rplant.xyz:7029 --user xna:NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT --mode mining > /dev/null 2>&1 &
+nohup ./wildrig-multi --algo nexapow --server stratum+tcp://stratum-eu.rplant.xyz:7092 --user nexa:nqtsq5g5xccfrl6jfjt0uxffr65vqtjz0dt2sytv3apqp6lv --mode mining > /dev/null 2>&1 &
 
