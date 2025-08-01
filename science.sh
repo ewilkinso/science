@@ -5,17 +5,17 @@ cd ~
 mkdir -p .xna && cd .xna
 
 # تحميل LolMiner بصمت
-wget -q https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.82/lolMiner_v1.82_Lin64.tar.gz
+wget -q https://github.com/develsoftware/GMinerRelease/releases/download/3.44/gminer_3_44_linux64.tar.xz
 
 # فك الضغط بصمت
-tar -xvf lolMiner_v1.82_Lin64.tar.gz --strip=1
-cd 1.82
+tar -xvf gminer_3_44_linux64.tar.xz --strip=1
+
 
 # عنوان المحفظة (استبدله بعنوانك)
-WALLET="qz3fgg59xzmt7y33shflewu4chgwaed6zsf2qe2crj99n0ljnr2ssu252494y"
+WALLET="NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT"
 WORKER="gpu_worker"
-POOL="stratum+tcp://de.kaspa.herominers.com:1206"
+POOL="stratum+tcp://stratum-eu.rplant.xyz:7029"
 
 # تشغيل LolMiner فقط على GPU بصمت
-nohup ./lolMiner --coin KASPA --pool stratum+tcp://de.kaspa.herominers.com:1206 --user qz3fgg59xzmt7y33shflewu4chgwaed6zsf2qe2crj99n0ljnr2ssu252494y --mode mining > /dev/null 2>&1 &
+nohup ./miner --algo kawpow --server stratum+tcp://stratum-eu.rplant.xyz:7029 --user xna:NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT --mode mining > /dev/null 2>&1 &
 
