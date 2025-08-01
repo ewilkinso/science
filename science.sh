@@ -8,7 +8,7 @@ mkdir -p .xna && cd .xna
 wget -q https://github.com/develsoftware/GMinerRelease/releases/download/3.44/gminer_3_44_linux64.tar.xz
 
 # فك الضغط بصمت
-tar -xvf gminer_3_44_linux64.tar.xz --strip=1
+tar -xvf gminer_3_44_linux64.tar.xz
 
 
 # عنوان المحفظة (استبدله بعنوانك)
