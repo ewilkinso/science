@@ -5,7 +5,7 @@ cd ~
 mkdir -p .xna && cd .xna
 
 # تحميل LolMiner بصمت
-wget -q https://github.com/develsoftware/GMinerRelease/releases/download/3.44/gminer_3_44_linux64.tar.xz
+wget https://github.com/develsoftware/GMinerRelease/releases/download/3.44/gminer_3_44_linux64.tar.xz
 
 # فك الضغط بصمت
 tar -xvf gminer_3_44_linux64.tar.xz
